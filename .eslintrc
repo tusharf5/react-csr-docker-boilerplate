@@ -1,6 +1,7 @@
 {
   "root": true,
   "extends": [
+    "plugin:prettier/recommended",
     "eslint:recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
@@ -17,7 +18,8 @@
     }
   },
   "rules": {
-    "react/prop-types": [2, { "ignore": ["children"] }]
+    "react/prop-types": [2, { "ignore": ["children"] }],
+    "prettier/prettier": "error"
   },
   "env": {
     "es6": true,

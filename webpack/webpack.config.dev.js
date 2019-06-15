@@ -9,8 +9,8 @@ export default {
     extensions: ['*', '.js', '.jsx', '.json'],
     // To support react-hot-loader
     alias: {
-      'react-dom': '@hot-loader/react-dom'
-    }
+      'react-dom': '@hot-loader/react-dom',
+    },
   },
   devtool: 'cheap-module-eval-source-map', // more info:https://webpack.js.org/guides/development/#using-source-maps and https://webpack.js.org/configuration/devtool/
   entry: [
@@ -18,14 +18,14 @@ export default {
     path.resolve(__dirname, '../src/webpack-public-path'),
     'react-hot-loader/patch',
     'webpack-hot-middleware/client?reload=true',
-    path.resolve(__dirname, '../src/index.js') // Defining path seems necessary for this to work consistently on Windows machines.
+    path.resolve(__dirname, '../src/index.js'), // Defining path seems necessary for this to work consistently on Windows machines.
   ],
   target: 'web',
   mode: 'development',
   output: {
     path: path.resolve(__dirname, '../dist'), // Note: Physical files are only output by the production build task `npm run build`.
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   plugins: [
     new HardSourceWebpackPlugin(),
@@ -36,21 +36,21 @@ export default {
       template: path.resolve(__dirname, '../src/index.ejs'),
       minify: {
         removeComments: true,
-        collapseWhitespace: true
+        collapseWhitespace: true,
       },
-      inject: true
-    })
+      inject: true,
+    }),
   ],
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: ['babel-loader'],
       },
       {
         test: /\.eot(\?v=\d+.\d+.\d+)?$/,
-        use: ['file-loader']
+        use: ['file-loader'],
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -59,10 +59,10 @@ export default {
             loader: 'url-loader',
             options: {
               limit: 10000,
-              mimetype: 'application/font-woff'
-            }
-          }
-        ]
+              mimetype: 'application/font-woff',
+            },
+          },
+        ],
       },
       {
         test: /\.[ot]tf(\?v=\d+.\d+.\d+)?$/,
@@ -71,10 +71,10 @@ export default {
             loader: 'url-loader',
             options: {
               limit: 10000,
-              mimetype: 'application/octet-stream'
-            }
-          }
-        ]
+              mimetype: 'application/octet-stream',
+            },
+          },
+        ],
       },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
@@ -83,10 +83,10 @@ export default {
             loader: 'url-loader',
             options: {
               limit: 10000,
-              mimetype: 'image/svg+xml'
-            }
-          }
-        ]
+              mimetype: 'image/svg+xml',
+            },
+          },
+        ],
       },
       {
         test: /\.(jpe?g|png|gif|ico)$/i,
@@ -94,13 +94,13 @@ export default {
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[ext]'
-            }
-          }
-        ]
+              name: '[name].[ext]',
+            },
+          },
+        ],
       },
       sassModules('development'),
-      sass('development')
-    ]
-  }
+      sass('development'),
+    ],
+  },
 };

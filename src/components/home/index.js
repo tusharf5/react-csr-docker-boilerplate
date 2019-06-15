@@ -8,7 +8,7 @@ function Home() {
 }
 
 Home.propTypes = {
-  children: ProptTypes.any
+  children: ProptTypes.any,
 };
 
 export default Home;

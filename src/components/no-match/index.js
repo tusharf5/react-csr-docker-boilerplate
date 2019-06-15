@@ -6,7 +6,7 @@ const NoMatch = function NoMatch() {
 };
 
 NoMatch.propTypes = {
-  children: ProptTypes.any
+  children: ProptTypes.any,
 };
 
 export default NoMatch;

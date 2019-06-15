@@ -16,7 +16,7 @@ class Root extends Component {
 }
 
 Root.propTypes = {
-  history: PropTypes.object.isRequired
+  history: PropTypes.object.isRequired,
 };
 
 export default hot(Root);

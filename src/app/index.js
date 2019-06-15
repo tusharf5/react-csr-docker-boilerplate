@@ -7,15 +7,15 @@ import InProgress from '../components/in-progress';
 const AsyncHome = importedComponent(
   () => import(/* webpackChunkName:'Home' */ '../components/home'),
   {
-    LoadingComponent: InProgress
-  }
+    LoadingComponent: InProgress,
+  },
 );
 
 const AsyncNoMatch = importedComponent(
   () => import(/* webpackChunkName:'NoMatch' */ '../components/no-match'),
   {
-    LoadingComponent: InProgress
-  }
+    LoadingComponent: InProgress,
+  },
 );
 
 const App = () => {

@@ -11,25 +11,25 @@ export const sassModules = env => {
         options: {
           sourceMap: true,
           modules: {
-            localIdentName: '[local]___[hash:base64:5]' // [name]__
+            localIdentName: '[local]___[hash:base64:5]', // [name]__
           },
-        }
+        },
       },
       {
         loader: 'postcss-loader',
         options: {
           plugins: () => [require('autoprefixer')],
-          sourceMap: true
-        }
+          sourceMap: true,
+        },
       },
       {
         loader: 'sass-loader',
         options: {
           includePaths: [path.resolve(__dirname, '../src/styles')],
-          sourceMap: true
-        }
-      }
-    ]
+          sourceMap: true,
+        },
+      },
+    ],
   };
 
   const prodConfig = {
@@ -41,25 +41,25 @@ export const sassModules = env => {
         options: {
           sourceMap: true,
           modules: {
-            localIdentName: '[local]___[hash:base64:5]' // [name]__
+            localIdentName: '[local]___[hash:base64:5]', // [name]__
           },
-        }
+        },
       },
       {
         loader: 'postcss-loader',
         options: {
           plugins: () => [require('cssnano'), require('autoprefixer')],
-          sourceMap: true
-        }
+          sourceMap: true,
+        },
       },
       {
         loader: 'sass-loader',
         options: {
           includePaths: [path.resolve(__dirname, '../src/styles')],
-          sourceMap: true
-        }
-      }
-    ]
+          sourceMap: true,
+        },
+      },
+    ],
   };
 
   return env === 'production' ? prodConfig : devConfig;
@@ -74,24 +74,24 @@ export const sass = env => {
       {
         loader: 'css-loader',
         options: {
-          sourceMap: true
-        }
+          sourceMap: true,
+        },
       },
       {
         loader: 'postcss-loader',
         options: {
           plugins: () => [require('autoprefixer')],
-          sourceMap: true
-        }
+          sourceMap: true,
+        },
       },
       {
         loader: 'sass-loader',
         options: {
           includePaths: [path.resolve(__dirname, '../src/styles')],
-          sourceMap: true
-        }
-      }
-    ]
+          sourceMap: true,
+        },
+      },
+    ],
   };
 
   const prodConfig = {
@@ -102,24 +102,24 @@ export const sass = env => {
       {
         loader: 'css-loader',
         options: {
-          sourceMap: true
-        }
+          sourceMap: true,
+        },
       },
       {
         loader: 'postcss-loader',
         options: {
           plugins: () => [require('cssnano'), require('autoprefixer')],
-          sourceMap: true
-        }
+          sourceMap: true,
+        },
       },
       {
         loader: 'sass-loader',
         options: {
           includePaths: [path.resolve(__dirname, '../src/styles')],
-          sourceMap: true
-        }
-      }
-    ]
+          sourceMap: true,
+        },
+      },
+    ],
   };
 
   return env === 'production' ? prodConfig : devConfig;

@@ -8,6 +8,6 @@ const InProgress = function InProgress() {
 };
 
 InProgress.propTypes = {
-  children: ProptTypes.any
+  children: ProptTypes.any,
 };
 export default InProgress;

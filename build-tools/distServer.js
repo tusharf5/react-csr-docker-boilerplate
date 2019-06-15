@@ -13,11 +13,11 @@ console.log(chalkProcessing('Opening production build...'));
 browserSync({
   port: 4000,
   ui: {
-    port: 4001
+    port: 4001,
   },
   server: {
-    baseDir: 'dist'
+    baseDir: 'dist',
   },
   files: ['src/*.html'],
-  middleware: [historyApiFallback()]
+  middleware: [historyApiFallback()],
 });

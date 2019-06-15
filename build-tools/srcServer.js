@@ -17,7 +17,7 @@ const bundler = webpack(config);
 browserSync({
   port: 3000,
   ui: {
-    port: 3001
+    port: 3001,
   },
   open: false, // disable automatic browser tab opening
   server: {
@@ -44,17 +44,17 @@ browserSync({
           chunkGroups: false,
           children: false,
           modules: false,
-          moduleTrace: false
-        }
+          moduleTrace: false,
+        },
         // for other settings see
         // https://webpack.js.org/guides/development/#using-webpack-dev-middleware
       }),
 
       // bundler should be the same as above
-      webpackHotMiddleware(bundler)
-    ]
+      webpackHotMiddleware(bundler),
+    ],
   },
   // no need to watch '*.js' here, webpack will take care of it for us,
   // including full page reloads if HMR won't work
-  files: ['src/*.html']
+  files: ['src/*.html'],
 });
