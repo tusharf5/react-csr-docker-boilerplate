@@ -30,7 +30,8 @@
     "test:watch": "jest --watchAll",
     "open:cover": "yarn run test:cover && opn ./coverage/lcov-report/index.html",
     "analyze-bundle": "babel-node ./build-tools/analyzeBundle.js",
-    "prettier": "prettier --write '**/*.{ts,js,css,html}'"
+    "prettier": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{js,jsx,html,scss,css,json}\"",
+    "precommit": "lint-staged && yarn lint && yarn run test"
   },
   "author": "",
   "license": "MIT",
@@ -88,6 +89,7 @@
     "jest": "~24.8.0",
     "jest-cli": "~24.8.0",
     "json-loader": "~0.5.7",
+    "lint-staged": "8.2.1",
     "mini-css-extract-plugin": "~0.7.0",
     "mockdate": "~2.0.2",
     "node-sass": "~4.12.0",
@@ -125,5 +127,11 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,html,css,scss}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
