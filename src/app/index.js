@@ -4,6 +4,7 @@ import importedComponent from 'react-imported-component';
 
 import InProgress from '../components/in-progress';
 
+// Aync Components should always be exported as hot loaded
 const AsyncHome = importedComponent(
   () => import(/* webpackChunkName:'Home' */ '../components/home'),
   {

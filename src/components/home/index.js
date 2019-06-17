@@ -1,3 +1,4 @@
+import { hot } from 'react-hot-loader/root';
 import React from 'react';
 import ProptTypes from 'prop-types';
 
@@ -11,4 +12,4 @@ Home.propTypes = {
   children: ProptTypes.any,
 };
 
-export default Home;
+export default hot(Home);
