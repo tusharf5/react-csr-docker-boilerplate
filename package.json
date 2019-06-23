@@ -33,7 +33,7 @@
     "prettier": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{js,jsx,html,scss,css,json}\"",
     "precommit": "lint-staged && yarn lint && yarn run test"
   },
-  "author": "",
+  "author": "Tushar Sharma (ts17995@gmail.com)",
   "license": "MIT",
   "dependencies": {
     "@hot-loader/react-dom": "~16.8.6",
