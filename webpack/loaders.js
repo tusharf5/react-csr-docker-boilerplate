@@ -5,7 +5,12 @@ export const sassModules = env => {
   const devConfig = {
     test: /(module\.css|module\.scss|module\.sass)$/,
     use: [
-      'style-loader',
+      {
+        loader: 'style-loader',
+        options: {
+          hmr: false,
+        },
+      },
       {
         loader: 'css-loader',
         options: {
@@ -70,7 +75,12 @@ export const sass = env => {
     test: /(\.css|\.scss|\.sass)$/,
     exclude: /(module\.css|module\.scss|module\.sass)$/,
     use: [
-      'style-loader',
+      {
+        loader: 'style-loader',
+        options: {
+          hmr: false,
+        },
+      },
       {
         loader: 'css-loader',
         options: {
