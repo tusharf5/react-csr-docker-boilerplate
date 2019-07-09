@@ -77,9 +77,6 @@ export const sass = env => {
     use: [
       {
         loader: 'style-loader',
-        options: {
-          hmr: false,
-        },
       },
       {
         loader: 'css-loader',
