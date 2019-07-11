@@ -1,6 +1,6 @@
 {
   "name": "react-csr-hmr-docker-boilerplate",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "",
   "engines": {
     "node": ">=8"
@@ -119,9 +119,10 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,json,html,css,scss}": [
+    "*.{js,jsx,json,html,css,scss,md}": [
       "yarn manage-release",
       "npx prettier --write",
+      "git add CHANGELOG.md",
       "git add"
     ]
   },
