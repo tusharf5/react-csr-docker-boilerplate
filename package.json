@@ -1,6 +1,6 @@
 {
   "name": "react-csr-hmr-docker-boilerplate",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "",
   "engines": {
     "node": ">=8"
@@ -123,6 +123,7 @@
       "yarn manage-release",
       "npx prettier --write",
       "git add CHANGELOG.md",
+      "git add package.json",
       "git add"
     ]
   },
