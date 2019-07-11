@@ -1,6 +1,6 @@
 {
   "name": "react-csr-hmr-docker-boilerplate",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "",
   "engines": {
     "node": ">=8"
@@ -122,7 +122,6 @@
     "*.{js,jsx,json,html,css,scss,md}": [
       "yarn manage-release",
       "npx prettier --write",
-      "git add CHANGELOG.md",
       "git add package.json",
       "git add"
     ]
@@ -130,6 +129,7 @@
   "standard-version": {
     "skip": {
       "commit": true,
+      "changelog": true,
       "tag": true
     }
   }
