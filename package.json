@@ -1,6 +1,6 @@
 {
   "name": "react-csr-hmr-docker-boilerplate",
-  "version": "0.2.4",
+  "version": "0.2.6",
   "description": "",
   "engines": {
     "node": ">=8"
