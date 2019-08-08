@@ -7,9 +7,7 @@ export const sassModules = env => {
     use: [
       {
         loader: 'style-loader',
-        options: {
-          hmr: false,
-        },
+        options: {},
       },
       {
         loader: 'css-loader',
