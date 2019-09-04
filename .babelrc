@@ -12,9 +12,11 @@
         "@babel/preset-react"
       ],
       "plugins": [
+        "@babel/plugin-transform-runtime",
         "@babel/plugin-proposal-class-properties",
-        "react-hot-loader/babel",
-        "@babel/plugin-syntax-dynamic-import"
+        "@babel/plugin-transform-react-constant-elements",
+        "@babel/plugin-syntax-dynamic-import",
+        "react-imported-component/babel"
       ]
     },
     "production": {
@@ -33,18 +35,23 @@
         "@babel/preset-react"
       ],
       "plugins": [
+        "@babel/plugin-transform-runtime",
         "@babel/plugin-proposal-class-properties",
         "@babel/plugin-transform-react-constant-elements",
+        "@babel/plugin-syntax-dynamic-import",
         "transform-react-remove-prop-types",
-        "@babel/plugin-syntax-dynamic-import"
+        "react-imported-component/babel"
       ]
     },
     "test": {
       "presets": ["@babel/preset-env", "@babel/preset-react"],
       "plugins": [
+        "@babel/plugin-transform-runtime",
         "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-react-constant-elements",
         "@babel/plugin-syntax-dynamic-import",
-        "transform-react-remove-prop-types"
+        "transform-react-remove-prop-types",
+        "react-imported-component/babel"
       ]
     }
   }

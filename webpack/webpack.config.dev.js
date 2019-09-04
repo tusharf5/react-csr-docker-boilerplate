@@ -40,6 +40,7 @@ export default {
       },
       inject: true,
     }),
+    new webpack.NamedModulesPlugin(),
   ],
   module: {
     rules: [

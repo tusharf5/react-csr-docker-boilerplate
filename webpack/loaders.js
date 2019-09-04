@@ -28,8 +28,10 @@ export const sassModules = env => {
       {
         loader: 'sass-loader',
         options: {
-          includePaths: [path.resolve(__dirname, '../src/styles')],
           sourceMap: true,
+          sassOptions: {
+            includePaths: [path.resolve(__dirname, '../src')],
+          },
         },
       },
     ],
@@ -58,8 +60,10 @@ export const sassModules = env => {
       {
         loader: 'sass-loader',
         options: {
-          includePaths: [path.resolve(__dirname, '../src/styles')],
           sourceMap: true,
+          sassOptions: {
+            includePaths: [path.resolve(__dirname, '../src')],
+          },
         },
       },
     ],
@@ -92,8 +96,10 @@ export const sass = env => {
       {
         loader: 'sass-loader',
         options: {
-          includePaths: [path.resolve(__dirname, '../src/styles')],
           sourceMap: true,
+          sassOptions: {
+            includePaths: [path.resolve(__dirname, '../src')],
+          },
         },
       },
     ],
@@ -120,8 +126,10 @@ export const sass = env => {
       {
         loader: 'sass-loader',
         options: {
-          includePaths: [path.resolve(__dirname, '../src/styles')],
           sourceMap: true,
+          sassOptions: {
+            includePaths: [path.resolve(__dirname, '../src')],
+          },
         },
       },
     ],

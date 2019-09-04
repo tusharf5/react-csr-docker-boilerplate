@@ -61,6 +61,7 @@ export default {
       trackJSToken: '',
     }),
     new CompressionPlugin(),
+    new webpack.NamedModulesPlugin(),
   ],
   module: {
     rules: [
