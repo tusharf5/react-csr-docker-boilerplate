@@ -10,4 +10,5 @@ const InProgress = function InProgress() {
 InProgress.propTypes = {
   children: ProptTypes.any,
 };
+
 export default InProgress;

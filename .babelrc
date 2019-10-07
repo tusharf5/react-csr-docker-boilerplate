@@ -16,6 +16,7 @@
         "@babel/plugin-proposal-class-properties",
         "@babel/plugin-transform-react-constant-elements",
         "@babel/plugin-syntax-dynamic-import",
+        "react-hot-loader/babel",
         "react-imported-component/babel"
       ]
     },
@@ -40,6 +41,7 @@
         "@babel/plugin-transform-react-constant-elements",
         "@babel/plugin-syntax-dynamic-import",
         "transform-react-remove-prop-types",
+        "react-hot-loader/babel",
         "react-imported-component/babel"
       ]
     },
@@ -51,6 +53,7 @@
         "@babel/plugin-transform-react-constant-elements",
         "@babel/plugin-syntax-dynamic-import",
         "transform-react-remove-prop-types",
+        "react-hot-loader/babel",
         "react-imported-component/babel"
       ]
     }
