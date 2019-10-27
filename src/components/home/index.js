@@ -1,3 +1,4 @@
+import { hot } from 'react-hot-loader/root';
 import React, { Fragment } from 'react';
 import ProptTypes from 'prop-types';
 import { Switch, Route, Link } from 'react-router-dom';
@@ -29,4 +30,5 @@ Home.propTypes = {
   children: ProptTypes.any,
 };
 
-export default Home;
+// exporting this with hot hoc as this component contains route declarations
+export default hot(Home);

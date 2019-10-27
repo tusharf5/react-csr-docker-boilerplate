@@ -83,3 +83,7 @@ The various types of commits:
 - `ci`: (updating ci tools etc; no production code change)
 
 Use lower case not title case!
+
+## Important
+
+For Supporting Hot Reload for Nested Routes. The Components containing the Route declarations must be exported with the `export default hot(Component)`.
